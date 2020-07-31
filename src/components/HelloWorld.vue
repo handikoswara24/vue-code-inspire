@@ -1,7 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <alert>First Alert</alert>
+    <alert mode="primary">First Alert</alert>
+    <alert mode="success">Second Alert</alert>
+    <alert mode="danger">Third Alert</alert>
   </div>
 </template>
 
