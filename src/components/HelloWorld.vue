@@ -8,6 +8,8 @@
       <input type="text" v-model="lastName" placeholder="Your nice name?" />
       <p>Welcome, {{lastName}}</p>
     </div>
+    <button @click="ClickedMe()">Click Me</button>
+    <input type="text" @keyup.enter="DoSomething()" placeholder="Input Your Code" />
   </div>
 </template>
 
@@ -21,6 +23,14 @@ export default {
     return {
       lastName: "Aaa"
     };
+  },
+  methods: {
+    ClickedMe: function() {
+      console.log("You click a button");
+    },
+    DoSomething: function() {
+      console.log("Coupon Applied");
+    }
   }
 };
 </script>
