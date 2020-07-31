@@ -10,6 +10,10 @@
     </div>
     <button @click="ClickedMe()">Click Me</button>
     <input type="text" @keyup.enter="DoSomething()" placeholder="Input Your Code" />
+    <h3>Using Loop</h3>
+    <ul>
+      <li v-for="(person, index) in students" v-bind:key="index">{{person}}</li>
+    </ul>
   </div>
 </template>
 
@@ -21,7 +25,8 @@ export default {
   },
   data() {
     return {
-      lastName: "Aaa"
+      lastName: "Aaa",
+      students: ["aaa", "aaa", "ccc", "ddd"]
     };
   },
   methods: {
